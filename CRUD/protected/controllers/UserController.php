@@ -57,16 +57,21 @@ class UserController extends Controller
 
 		if(isset($_POST['User']))
 		{
-			$rnd = rand(0,9999);
+			$imgErr = false;
 			$model->attributes=$_POST['User'];
+			$err = $model->validate();
 			$model->image = CUploadedFile::getInstance($model,'image');
 			if(isset($model->image)) {
 				$model->image->saveAs('uploads/'.$model->image->name);
+			} else {
+				$imgErr = true;
+				$model->addError('image', 'Image cannot be blank.');
 			}
-			if($model->save())
+			if($err && !$imgErr) {
+				$model->save();
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
-
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -80,28 +85,34 @@ class UserController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$currentImg = $model->image;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-	
-
+		
 		if(isset($_POST['User']))
 		{
+			unset($_POST['User']['image']);
 			$model->attributes=$_POST['User'];
-			$model->image=CUploadedFile::getInstance($model,'image');
-			if(isset($model->image)) {
-				$model->image->saveAs('uploads/'.$model->image->name);
-			}
-			if($model->save())
+			
+			$newImg = CUploadedFile::getInstance($model,'image');
+			if(isset($newImg)) {
+				$model->image = $newImg;
+				$model->image->saveAs('uploads/'.$newImg->name);
+				if($model->save())
 				
 				$this->redirect(array('view','id'=>$model->id));
+			} elseif($model->validate()) {
+
+				$model->updateByPk($id, $_POST['User']);
+				$this->redirect(array('view','id'=>$model->id));
+			}
+			
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
 		));
 	}
-
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.

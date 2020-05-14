@@ -37,12 +37,23 @@
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
-
+<?php if($model->isNewRecord) { ?>
 	<div class="form-group row">
 		<?php echo $form->labelEx($model,'image'); ?>
 		<?php echo $form->fileField($model,'image'); ?>
 		<?php echo $form->error($model,'image'); ?>
 	</div>
+
+<?php } else { ?>
+
+	<div class="form-group row">
+		<?php echo('Current Image'); ?>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/uploads/'.$model->image, 'image', array('class' => 'img-circle', 'style'=>'max-width: 50px')); ?>
+		<?php echo $form->labelEx($model,'image'); ?>
+		<?php echo $form->fileField($model,'image'); ?>
+		<?php echo $form->error($model,'image'); ?>
+	</div>
+<?php } ?>
 
 	<div class="form-group row">
 		<?php echo $form->labelEx($model,'marks'); ?>

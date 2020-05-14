@@ -32,10 +32,6 @@
 			<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 		</a>
 	</nav>
-	<!-- <div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div> -->
-	<!-- header -->
 	<nav class= "navbar navbar-light bg-light"> 
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
