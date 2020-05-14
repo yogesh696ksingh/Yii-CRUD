@@ -1,0 +1,1370 @@
+2020/05/13 19:28:30 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in C:\wamp64\www\yii\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\wamp64\www\yii\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\wamp64\www\yii\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\wamp64\www\yii\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\wamp64\www\yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\wamp64\www\yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\wamp64\www\yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\wamp64\www\yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\wamp64\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp64\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=gii/model/index
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=gii
+---
+2020/05/13 19:42:02 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "user". in C:\wamp64\www\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CController.php(270): CController->missingAction('user')
+#1 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('user')
+#2 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/user')
+#3 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/crud/index.php?r=site/user
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user
+---
+2020/05/13 23:28:30 [error] [exception.CException] CException: Property "CActiveForm.options" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('options', Array)
+#1 C:\wamp64\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CActiveForm', Array)
+#2 C:\wamp64\www\yii\framework\web\CBaseController.php(198): CBaseController->createWidget('CActiveForm', Array)
+#3 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(10): CBaseController->beginWidget('CActiveForm', Array)
+#4 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#5 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#6 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#7 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#10 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#12 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(78): CController->render('create', Array)
+#13 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#14 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#24 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#25 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=site/login
+---
+2020/05/13 23:29:29 [error] [exception.CException] CException: Property "CActiveForm.enctype" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('enctype', 'multipart/form-...')
+#1 C:\wamp64\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CActiveForm', Array)
+#2 C:\wamp64\www\yii\framework\web\CBaseController.php(198): CBaseController->createWidget('CActiveForm', Array)
+#3 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(10): CBaseController->beginWidget('CActiveForm', Array)
+#4 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#5 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#6 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#7 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#10 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#12 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(78): CController->render('create', Array)
+#13 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#14 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#24 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#25 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=site/login
+---
+2020/05/13 23:48:05 [error] [exception.CException] CException: Property "CFileValidator.skipOnEmpty" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp64\www\yii\framework\validators\CValidator.php(177): CComponent->__set('skipOnEmpty', 'false')
+#1 C:\wamp64\www\yii\framework\base\CModel.php(287): CValidator::createValidator('skipOnEmpty', Object(User), Array, Array)
+#2 C:\wamp64\www\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\wamp64\www\yii\framework\base\CModel.php(304): CModel->getValidators('first_name')
+#4 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(1520): CModel->isAttributeRequired('first_name')
+#5 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(User), 'first_name', Array)
+#6 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(24): CActiveForm->labelEx(Object(User), 'first_name')
+#7 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#8 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#9 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#10 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#12 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#13 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#14 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#15 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(82): CController->render('create', Array)
+#16 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#17 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#26 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#27 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#28 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=site/login
+---
+2020/05/13 23:49:29 [error] [exception.CException] CException: Property "CFileValidator.0" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp64\www\yii\framework\validators\CValidator.php(177): CComponent->__set('0', 'required')
+#1 C:\wamp64\www\yii\framework\base\CModel.php(287): CValidator::createValidator(0, Object(User), Array, Array)
+#2 C:\wamp64\www\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\wamp64\www\yii\framework\base\CModel.php(304): CModel->getValidators('first_name')
+#4 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(1520): CModel->isAttributeRequired('first_name')
+#5 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(User), 'first_name', Array)
+#6 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(24): CActiveForm->labelEx(Object(User), 'first_name')
+#7 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#8 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#9 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#10 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#12 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#13 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#14 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#15 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(82): CController->render('create', Array)
+#16 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#17 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#26 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#27 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#28 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=site/login
+---
+2020/05/13 23:54:27 [error] [exception.CException] CException: Property "CFileValidator.0" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp64\www\yii\framework\validators\CValidator.php(177): CComponent->__set('0', 'required')
+#1 C:\wamp64\www\yii\framework\base\CModel.php(287): CValidator::createValidator(0, Object(User), Array, Array)
+#2 C:\wamp64\www\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\wamp64\www\yii\framework\base\CModel.php(304): CModel->getValidators('first_name')
+#4 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(1520): CModel->isAttributeRequired('first_name')
+#5 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(User), 'first_name', Array)
+#6 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(24): CActiveForm->labelEx(Object(User), 'first_name')
+#7 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#8 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#9 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#10 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#12 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#13 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#14 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#15 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(80): CController->render('create', Array)
+#16 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#17 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#26 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#27 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#28 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=site/login
+---
+2020/05/13 23:54:28 [error] [exception.CException] CException: Property "CFileValidator.0" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp64\www\yii\framework\validators\CValidator.php(177): CComponent->__set('0', 'required')
+#1 C:\wamp64\www\yii\framework\base\CModel.php(287): CValidator::createValidator(0, Object(User), Array, Array)
+#2 C:\wamp64\www\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\wamp64\www\yii\framework\base\CModel.php(304): CModel->getValidators('first_name')
+#4 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(1520): CModel->isAttributeRequired('first_name')
+#5 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(User), 'first_name', Array)
+#6 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(24): CActiveForm->labelEx(Object(User), 'first_name')
+#7 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#8 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#9 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#10 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#12 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#13 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#14 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#15 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(80): CController->render('create', Array)
+#16 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#17 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#26 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#27 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#28 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=site/login
+---
+2020/05/13 23:54:38 [error] [exception.CException] CException: Property "CFileValidator.0" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp64\www\yii\framework\validators\CValidator.php(177): CComponent->__set('0', 'required')
+#1 C:\wamp64\www\yii\framework\base\CModel.php(287): CValidator::createValidator(0, Object(User), Array, Array)
+#2 C:\wamp64\www\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\wamp64\www\yii\framework\base\CModel.php(304): CModel->getValidators('first_name')
+#4 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(1520): CModel->isAttributeRequired('first_name')
+#5 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(User), 'first_name', Array)
+#6 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(24): CActiveForm->labelEx(Object(User), 'first_name')
+#7 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#8 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#9 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#10 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#12 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#13 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#14 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#15 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(80): CController->render('create', Array)
+#16 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#17 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#26 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#27 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#28 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=site/login
+---
+2020/05/13 23:55:08 [error] [exception.CException] CException: Property "CFileValidator.0" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp64\www\yii\framework\validators\CValidator.php(177): CComponent->__set('0', 'required')
+#1 C:\wamp64\www\yii\framework\base\CModel.php(287): CValidator::createValidator(0, Object(User), Array, Array)
+#2 C:\wamp64\www\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\wamp64\www\yii\framework\base\CModel.php(304): CModel->getValidators('first_name')
+#4 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(1520): CModel->isAttributeRequired('first_name')
+#5 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(User), 'first_name', Array)
+#6 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(24): CActiveForm->labelEx(Object(User), 'first_name')
+#7 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#8 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#9 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#10 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#12 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#13 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#14 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#15 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(80): CController->render('create', Array)
+#16 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#17 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#26 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#27 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#28 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=site/login
+---
+2020/05/14 00:18:05 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:159
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('')
+#1 [internal function]: UserController->actionView('')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:20:45 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:159
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('')
+#1 [internal function]: UserController->actionView('')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:25:33 [error] [exception.CException] CException: Property "CUploadedFile.baseName" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(75): CComponent->__get('baseName')
+#1 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#2 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#11 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#12 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:27:49 [error] [exception.CException] CException: Property "User.filename" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('filename')
+#1 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(75): CActiveRecord->__get('filename')
+#2 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#3 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#13 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:28:57 [error] [exception.CException] CException: Property "CUploadedFile.types" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(75): CComponent->__get('types')
+#1 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#2 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#11 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#12 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:34:26 [error] [php] Undefined variable: uploadedFile (C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:75)
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#1 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp64\www\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp64\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=user/create
+in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php (75)
+in C:\wamp64\www\yii\CRUD\index.php (13)
+2020/05/14 00:34:46 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:162
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('')
+#1 [internal function]: UserController->actionView('')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:40:19 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:162
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('')
+#1 [internal function]: UserController->actionView('')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:42:21 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:162
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('')
+#1 [internal function]: UserController->actionView('')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:45:58 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:169
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('')
+#1 [internal function]: UserController->actionView('')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:46:05 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:169
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('1')
+#1 [internal function]: UserController->actionView('1')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=1
+---
+2020/05/14 00:49:19 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:169
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('')
+#1 [internal function]: UserController->actionView('')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:49:23 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:169
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('')
+#1 [internal function]: UserController->actionView('')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:56:16 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:167
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('')
+#1 [internal function]: UserController->actionView('')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 00:59:35 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:167
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('')
+#1 [internal function]: UserController->actionView('')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 01:03:39 [error] [php] Undefined variable: imagefile (C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:76)
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#1 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp64\www\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp64\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=user/create
+in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php (76)
+in C:\wamp64\www\yii\CRUD\index.php (13)
+2020/05/14 01:04:22 [error] [exception.CException] CException: Property "User.file" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('file')
+#1 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(76): CActiveRecord->__get('file')
+#2 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#3 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#13 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 01:07:43 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:167
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('')
+#1 [internal function]: UserController->actionView('')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 12:25:15 [error] [php] Undefined variable: id (C:\wamp64\www\yii\CRUD\protected\controllers\SiteController.php:34)
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=site/index
+in C:\wamp64\www\yii\CRUD\protected\controllers\SiteController.php (34)
+in C:\wamp64\www\yii\CRUD\index.php (13)
+2020/05/14 12:27:04 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\wamp64\www\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp64\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#4 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#5 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#6 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/yii/crud/index.php?r=site/index
+---
+2020/05/14 12:38:41 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "contact". in C:\wamp64\www\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CController.php(270): CController->missingAction('contact')
+#1 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('contact')
+#2 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/contact')
+#3 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/crud/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=site/page&view=about
+---
+2020/05/14 14:18:36 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "admin". in C:\wamp64\www\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CController.php(270): CController->missingAction('admin')
+#1 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/admin')
+#3 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/crud/index.php?r=site/admin
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=site/index
+---
+2020/05/14 15:06:29 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:167
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(55): UserController->loadModel('9')
+#1 [internal function]: UserController->actionView('9')
+#2 C:\wamp64\www\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/view&id=9
+---
+2020/05/14 15:13:20 [error] [php] Undefined variable: dataProvider (C:\wamp64\www\yii\CRUD\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=site/index
+in C:\wamp64\www\yii\CRUD\protected\controllers\SiteController.php (35)
+in C:\wamp64\www\yii\CRUD\index.php (13)
+2020/05/14 15:24:12 [warning] [application] Failed to set unsafe attribute "id" of "User".
+in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php (149)
+in C:\wamp64\www\yii\CRUD\index.php (13)
+2020/05/14 16:15:16 [error] [exception.Error] Error: Call to undefined function encode() in C:\wamp64\www\yii\CRUD\protected\views\user\_view.php:13
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CBaseController.php(130): require()
+#1 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, false)
+#2 C:\wamp64\www\yii\framework\zii\widgets\CListView.php(291): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array)
+#3 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(181): CListView->renderItems()
+#4 [internal function]: CBaseListView->renderSection(Array)
+#5 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback('/{(\\w+)}/', Array, '{summary}\n{sort...')
+#6 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(149): CBaseListView->renderContent()
+#7 C:\wamp64\www\yii\framework\web\CBaseController.php(182): CBaseListView->run()
+#8 C:\wamp64\www\yii\CRUD\protected\views\user\index.php(27): CBaseController->widget('zii.widgets.CLi...', Array)
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#10 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#12 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#13 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(140): CController->render('index', Array)
+#14 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#15 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#24 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#25 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/index
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/view&id=1
+---
+2020/05/14 16:15:45 [error] [exception.Error] Error: Call to undefined function encode() in C:\wamp64\www\yii\CRUD\protected\views\user\_view.php:9
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CBaseController.php(130): require()
+#1 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, false)
+#2 C:\wamp64\www\yii\framework\zii\widgets\CListView.php(291): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array)
+#3 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(181): CListView->renderItems()
+#4 [internal function]: CBaseListView->renderSection(Array)
+#5 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback('/{(\\w+)}/', Array, '{summary}\n{sort...')
+#6 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(149): CBaseListView->renderContent()
+#7 C:\wamp64\www\yii\framework\web\CBaseController.php(182): CBaseListView->run()
+#8 C:\wamp64\www\yii\CRUD\protected\views\user\index.php(27): CBaseController->widget('zii.widgets.CLi...', Array)
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#10 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#12 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#13 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(140): CController->render('index', Array)
+#14 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#15 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#24 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#25 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/index
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/view&id=1
+---
+2020/05/14 16:29:15 [error] [exception.CException] CException: Property "User.jnsKelamin" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('jnsKelamin')
+#1 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2760): CActiveRecord->__get('jnsKelamin')
+#2 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2167): CHtml::resolveValue(Object(User), 'jnsKelamin')
+#3 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(962): CHtml::activeRadioButtonList(Object(User), 'jnsKelamin', Array, Array)
+#4 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(56): CActiveForm->radioButtonList(Object(User), 'jnsKelamin', Array, Array)
+#5 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#6 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#7 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#8 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#10 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#12 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#13 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(83): CController->render('create', Array)
+#14 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#15 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#25 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/admin
+---
+2020/05/14 16:34:25 [error] [exception.CException] CException: Property "User.Active" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Active')
+#1 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2760): CActiveRecord->__get('Active')
+#2 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2167): CHtml::resolveValue(Object(User), 'Active')
+#3 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(962): CHtml::activeRadioButtonList(Object(User), 'Active', Array, Array)
+#4 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(56): CActiveForm->radioButtonList(Object(User), 'Active', Array, Array)
+#5 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#6 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#7 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#8 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#10 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#12 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#13 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(83): CController->render('create', Array)
+#14 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#15 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#25 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/admin
+---
+2020/05/14 16:39:19 [error] [exception.CException] CException: Property "User.Active" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Active')
+#1 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2760): CActiveRecord->__get('Active')
+#2 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2167): CHtml::resolveValue(Object(User), 'Active')
+#3 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(962): CHtml::activeRadioButtonList(Object(User), 'Active', Array, Array)
+#4 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(56): CActiveForm->radioButtonList(Object(User), 'Active', Array, Array)
+#5 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#6 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#7 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#8 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#10 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#12 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#13 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(83): CController->render('create', Array)
+#14 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#15 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#25 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/admin
+---
+2020/05/14 16:39:51 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in C:\wamp64\www\yii\CRUD\protected\views\user\_form.php:56
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#1 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#2 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#3 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#4 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#5 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#6 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#7 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(83): CController->render('create', Array)
+#8 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#9 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#19 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/admin
+---
+2020/05/14 16:46:39 [error] [exception.ParseError] ParseError: syntax error, unexpected ';', expecting ')' in C:\wamp64\www\yii\CRUD\protected\views\user\_form.php:62
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#1 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#2 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#3 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#4 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#5 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#6 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#7 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(83): CController->render('create', Array)
+#8 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#9 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#19 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/admin
+---
+2020/05/14 16:49:58 [error] [exception.CException] CException: Property "User.0" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('0')
+#1 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2760): CActiveRecord->__get('0')
+#2 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2167): CHtml::resolveValue(Object(User), 0)
+#3 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(962): CHtml::activeRadioButtonList(Object(User), 0, Array, Array)
+#4 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(61): CActiveForm->radioButtonList(Object(User), 0, Array, Array)
+#5 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#6 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#7 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#8 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#10 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#12 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#13 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(83): CController->render('create', Array)
+#14 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#15 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#25 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/admin
+---
+2020/05/14 16:50:25 [error] [exception.CException] CException: Property "User.0" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('0')
+#1 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2760): CActiveRecord->__get('0')
+#2 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2167): CHtml::resolveValue(Object(User), '0')
+#3 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(962): CHtml::activeRadioButtonList(Object(User), '0', Array, Array)
+#4 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(61): CActiveForm->radioButtonList(Object(User), '0', Array, Array)
+#5 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#6 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#7 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#8 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#10 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#12 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#13 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(83): CController->render('create', Array)
+#14 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#15 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#25 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/admin
+---
+2020/05/14 16:50:38 [error] [exception.CException] CException: Property "User.0" is not defined. in C:\wamp64\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp64\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('0')
+#1 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2760): CActiveRecord->__get('0')
+#2 C:\wamp64\www\yii\framework\web\helpers\CHtml.php(2167): CHtml::resolveValue(Object(User), '0')
+#3 C:\wamp64\www\yii\framework\web\widgets\CActiveForm.php(962): CHtml::activeRadioButtonList(Object(User), '0', Array, Array)
+#4 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(61): CActiveForm->radioButtonList(Object(User), '0', Array, Array)
+#5 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#6 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#7 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#8 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#10 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#12 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#13 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(83): CController->render('create', Array)
+#14 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#15 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#25 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/admin
+---
+2020/05/14 16:50:59 [error] [php] Invalid argument supplied for foreach() (C:\wamp64\www\yii\framework\web\helpers\CHtml.php:1267)
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(61): CActiveForm->radioButtonList()
+#1 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp64\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#3 C:\wamp64\www\yii\framework\web\CController.php(872): UserController->renderFile()
+#4 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): UserController->renderPartial()
+#5 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp64\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#7 C:\wamp64\www\yii\framework\web\CController.php(872): UserController->renderFile()
+#8 C:\wamp64\www\yii\framework\web\CController.php(785): UserController->renderPartial()
+#9 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(83): UserController->render()
+#10 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#11 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#13 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp64\www\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#15 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#16 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp64\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#19 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#20 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=user/create
+in C:\wamp64\www\yii\CRUD\protected\views\user\_form.php (61)
+in C:\wamp64\www\yii\CRUD\protected\views\user\create.php (18)
+in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php (83)
+2020/05/14 16:52:29 [error] [php] Trying to get property '0' of non-object (C:\wamp64\www\yii\framework\web\helpers\CHtml.php:2760)
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\views\user\_form.php(61): CActiveForm->radioButtonList()
+#1 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp64\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#3 C:\wamp64\www\yii\framework\web\CController.php(872): UserController->renderFile()
+#4 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): UserController->renderPartial()
+#5 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp64\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#7 C:\wamp64\www\yii\framework\web\CController.php(872): UserController->renderFile()
+#8 C:\wamp64\www\yii\framework\web\CController.php(785): UserController->renderPartial()
+#9 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(83): UserController->render()
+#10 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#11 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#13 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp64\www\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#15 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#16 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp64\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#19 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#20 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=user/create
+in C:\wamp64\www\yii\CRUD\protected\views\user\_form.php (61)
+in C:\wamp64\www\yii\CRUD\protected\views\user\create.php (18)
+in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php (83)
+2020/05/14 17:17:27 [error] [exception.ParseError] ParseError: syntax error, unexpected 'class' (T_CLASS), expecting ')' in C:\wamp64\www\yii\CRUD\protected\views\user\_form.php:70
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#1 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#2 C:\wamp64\www\yii\CRUD\protected\views\user\create.php(18): CController->renderPartial('_form', Array)
+#3 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#4 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#5 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#6 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#7 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(83): CController->render('create', Array)
+#8 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#9 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#19 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/create
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/create
+---
+2020/05/14 17:23:55 [error] [php] Undefined variable: dataprovider (C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:140)
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#1 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp64\www\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp64\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=user/index
+in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php (140)
+in C:\wamp64\www\yii\CRUD\index.php (13)
+2020/05/14 17:24:15 [error] [php] Illegal string offset 'status' (C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:141)
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#1 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp64\www\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp64\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=user/index
+in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php (141)
+in C:\wamp64\www\yii\CRUD\index.php (13)
+2020/05/14 17:24:33 [error] [php] Illegal string offset 'status' (C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:141)
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#1 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp64\www\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp64\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=user/index
+in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php (141)
+in C:\wamp64\www\yii\CRUD\index.php (13)
+2020/05/14 17:49:52 [error] [exception.ParseError] ParseError: syntax error, unexpected '=', expecting ')' in C:\wamp64\www\yii\CRUD\protected\views\user\_view.php:21
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, false)
+#1 C:\wamp64\www\yii\framework\zii\widgets\CListView.php(291): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array)
+#2 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(181): CListView->renderItems()
+#3 [internal function]: CBaseListView->renderSection(Array)
+#4 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback('/{(\\w+)}/', Array, '{summary}\n{sort...')
+#5 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(149): CBaseListView->renderContent()
+#6 C:\wamp64\www\yii\framework\web\CBaseController.php(182): CBaseListView->run()
+#7 C:\wamp64\www\yii\CRUD\protected\views\user\index.php(27): CBaseController->widget('zii.widgets.CLi...', Array)
+#8 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#10 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#12 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(143): CController->render('index', Array)
+#13 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#14 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#24 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#25 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/index
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/view&id=8
+---
+2020/05/14 17:51:09 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in C:\wamp64\www\yii\CRUD\protected\views\user\_view.php:21
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, false)
+#1 C:\wamp64\www\yii\framework\zii\widgets\CListView.php(291): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array)
+#2 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(181): CListView->renderItems()
+#3 [internal function]: CBaseListView->renderSection(Array)
+#4 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback('/{(\\w+)}/', Array, '{summary}\n{sort...')
+#5 C:\wamp64\www\yii\framework\zii\widgets\CBaseListView.php(149): CBaseListView->renderContent()
+#6 C:\wamp64\www\yii\framework\web\CBaseController.php(182): CBaseListView->run()
+#7 C:\wamp64\www\yii\CRUD\protected\views\user\index.php(27): CBaseController->widget('zii.widgets.CLi...', Array)
+#8 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#9 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#10 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#11 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#12 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(143): CController->render('index', Array)
+#13 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#14 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#23 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#24 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#25 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/index
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/view&id=8
+---
+2020/05/14 17:59:00 [error] [exception.CException] CException: CActiveDataProvider and its behaviors do not have a method or closure named "getModels". in C:\wamp64\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp64\www\yii\CRUD\protected\models\User.php(100): CComponent->__call('getModels', Array)
+#1 C:\wamp64\www\yii\CRUD\protected\views\user\admin.php(45): User->search()
+#2 C:\wamp64\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp64\\www\\y...')
+#3 C:\wamp64\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp64\\www\\y...', Array, true)
+#4 C:\wamp64\www\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\wamp64\\www\\y...', Array, true)
+#5 C:\wamp64\www\yii\framework\web\CController.php(785): CController->renderPartial('admin', Array, true)
+#6 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(158): CController->render('admin', Array)
+#7 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#8 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp64\www\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp64\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#17 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#18 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\wamp64\www\yii\CRUD\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/yii/crud/index.php?r=user/admin
+HTTP_REFERER=http://localhost/yii/crud/index.php?r=user/index
+---
+2020/05/14 18:00:03 [error] [php] Undefined variable: allModels (C:\wamp64\www\yii\CRUD\protected\models\User.php:100)
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#1 C:\wamp64\www\yii\framework\web\CController.php(872): UserController->renderFile()
+#2 C:\wamp64\www\yii\framework\web\CController.php(785): UserController->renderPartial()
+#3 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(158): UserController->render()
+#4 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#5 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#7 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp64\www\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#9 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#10 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp64\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#14 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=user/admin
+in C:\wamp64\www\yii\CRUD\protected\models\User.php (100)
+in C:\wamp64\www\yii\CRUD\protected\views\user\admin.php (45)
+in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php (158)
+2020/05/14 18:02:56 [error] [php] Undefined variable: data (C:\wamp64\www\yii\CRUD\protected\models\User.php:100)
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#1 C:\wamp64\www\yii\framework\web\CController.php(872): UserController->renderFile()
+#2 C:\wamp64\www\yii\framework\web\CController.php(785): UserController->renderPartial()
+#3 C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php(158): UserController->render()
+#4 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#5 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#7 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp64\www\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#9 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#10 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp64\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#13 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#14 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=user/admin
+in C:\wamp64\www\yii\CRUD\protected\models\User.php (100)
+in C:\wamp64\www\yii\CRUD\protected\views\user\admin.php (45)
+in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php (158)
+2020/05/14 18:32:55 [error] [php] Creating default object from empty value (C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php:95)
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\wamp64\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#3 C:\wamp64\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp64\www\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#5 C:\wamp64\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#6 C:\wamp64\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp64\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp64\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#9 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#10 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\wamp64\www\yii\CRUD\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/crud/index.php?r=user/update&id=1
+in C:\wamp64\www\yii\CRUD\protected\controllers\UserController.php (95)
+in C:\wamp64\www\yii\CRUD\index.php (13)
