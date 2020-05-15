@@ -1,0 +1,15 @@
+Installation Guide
+1. Setup Wamp Server
+http://wampserver.aviatechno.net/
+
+2. Configure PHP in environment variables. 
+
+3. Extract the zip /path/to/wamp/www
+
+4. Create database name crud
+
+4. Import yii-CRUD-master/database/crud.sql in crud database.
+
+5. Configure  yii-CRUD-master/protected/config/database.php according to your server requirements. 
+
+6. Launch wamp and run the website on localhost.

@@ -62,7 +62,7 @@ class User extends CActiveRecord
 			'first_name' => 'First Name',
 			'last_name' => 'Last Name',
 			'email' => 'Email',
-			'image' => 'Image',
+			'image' => 'Profile Picture',
 			'marks' => 'Marks',
 			'status' => 'Status',
 		);
